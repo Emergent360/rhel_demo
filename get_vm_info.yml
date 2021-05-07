@@ -7,7 +7,11 @@
   tasks:
     - name: List information
       debug:
-        msg: "{{ ansible_play_hosts | map('extract', hostvars) | list | json_query('[*].{name: inventory_hostname}') }}"
+        msg: "{{ ansible_play_hosts \
+          | map('extract', hostvars) \
+          | list \
+          | json_query('[*].{name: inventory_hostname}' \
+          , tags_name: tags.Name) }}"
       run_once: yes
 
     - debug:

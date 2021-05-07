@@ -5,6 +5,10 @@
   gather_facts: yes
 
   tasks:
+    - name: List information
+      debug:
+        msg: "{{ ansible_play_hosts | map('extract', hostvars) | list | json_query('[*].{name: inventory_hostname}') }}"
+      run_once: yes
 
     - debug:
         var: ansible_distribution

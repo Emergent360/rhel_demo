@@ -12,4 +12,5 @@
 - src: https://github.com/Emergent360/launch_oscap_scan.git
 - src: https://github.com/Emergent360/remove_vpc_peering.git
 - src: https://github.com/Emergent360/teardown_aws_vpc.git
+- src: https://github.com/Emergent360/terminate_ami.git
 - name: RedHatOfficial.rhel8_ospp

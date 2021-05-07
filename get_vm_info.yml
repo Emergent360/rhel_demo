@@ -10,8 +10,11 @@
         msg: "{{ ansible_play_hosts \
           | map('extract', hostvars) \
           | list \
-          | json_query('[*].{name: inventory_hostname \
-          , tags_name: tags.Name}') }}"
+          | json_query('[*].{tags_Name: tags.Name \
+            tags_Platform: tags.Platform \
+            tags_Tier: tags.Tier \
+            tags_Zone: tags.Zone \
+            ,name: inventory_hostname}') }}"
       run_once: yes
 
     - debug:

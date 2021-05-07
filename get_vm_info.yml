@@ -14,12 +14,9 @@
             tags_Platform: tags.Platform \
             tags_Tier: tags.Tier \
             tags_Zone: tags.Zone \
-            ,name: inventory_hostname}') }}"
+            tags_Stage: tags.Stage \
+            inventory_hostname: inventory_hostname \
+            }') }}"
       run_once: yes
 
-    - debug:
-        var: ansible_distribution
-
-    - debug:
-        var: tags.Stage
 

@@ -13,5 +13,4 @@
 - src: https://github.com/Emergent360/remove_vpc_peering.git
 - src: https://github.com/Emergent360/teardown_aws_vpc.git
 - src: https://github.com/Emergent360/terminate_ami.git
-- name: RedHatOfficial.rhel8_ospp
-- name: RedHatOfficial.rhel8_stig
+- src: https://github.com/Emergent360/ansible-role-rhel8-stig.git

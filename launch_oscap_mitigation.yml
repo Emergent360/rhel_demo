@@ -15,7 +15,7 @@
   tasks:
     - name: Run mitigation role
       include_role:
-        name: "RedHatOfficial.{{ mitigation_role }}"
+        name: "ansible-role-rhel8-stig"
 
     - include_role:
         name: call_snow

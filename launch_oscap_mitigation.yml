@@ -4,10 +4,19 @@
   hosts: all
   gather_facts: yes
 
-  roles:
-  - RedHatOfficial.rhel8_stig
+#  roles:
+#  - RedHatOfficial.rhel8_stig
+#rhel8_stig
+#rhel8_pci_dss
+#rhel8_ospp
+#rhel8_hippa
+#rhel8_cui
 
   tasks:
+    - name: Run mitigation role
+      include_role:
+        name: "RedHatOfficial.{{ mitigation_role }}"
+
     - include_role:
         name: call_snow
       when: snow_call|bool

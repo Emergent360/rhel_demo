@@ -15,3 +15,4 @@
 - src: https://github.com/Emergent360/terminate_ami.git
 - src: https://github.com/Emergent360/ansible-role-rhel8-stig.git
 - src: https://github.com/Emergent360/ansible-role-rhel8-cis.git
+- src: https://github.com/Emergent360/ansible-role-rhel8-ospp.git

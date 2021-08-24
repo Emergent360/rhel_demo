@@ -17,6 +17,9 @@
       include_role:
         name: "{{ mitigation_role }}"
 
+    - name: Reboot instance
+      reboot:
+
     - include_role:
         name: call_snow
       when: snow_call|bool

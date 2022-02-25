@@ -1,0 +1,10 @@
+---
+- name: "Manage YUM Package"
+  hosts: all
+  gather_facts: yes
+
+  tasks:
+  - name: Manage a YUM package
+    yum:
+      name: "{{ package_name }}"
+      state: "{{ state }}"

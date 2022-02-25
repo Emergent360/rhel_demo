@@ -1,8 +1,7 @@
 ---
-collections:
-  - name: community.general
-  - name: datadog.datadog
 roles:
+- name: datadog.datadog
+  
 - src: https://github.com/Emergent360/launch_aws_vpc.git
 - src: https://github.com/Emergent360/create_vpc_peering.git
 - src: https://github.com/Emergent360/launch_rhel_ami.git

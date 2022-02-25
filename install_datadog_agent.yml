@@ -1,5 +1,5 @@
 - name: Install Datadog Agent on servers in AWS
-  hosts: tag_datadog_yes
+  hosts: all
   become: yes
   vars:
     datadog_api_key: "{{ api_key }}"

@@ -1,0 +1,14 @@
+- name: Install Datadog Agent on servers in AWS
+  hosts: tag_datadog_yes
+  become: yes
+  vars:
+    datadog_api_key: "{{ api_key }}"
+    datadog_config:
+      tags:
+        - env:dev
+      logs_enabled: true
+      process_config:
+        enabled: "true"
+
+  roles:
+    - { role: Datadog.datadog, become: yes }

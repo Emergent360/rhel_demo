@@ -1,4 +1,7 @@
 ---
+collections:
+- name: amazon.aws
+
 roles:
 - name: Datadog.datadog
 

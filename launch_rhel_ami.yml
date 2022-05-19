@@ -10,7 +10,7 @@
   tasks:
   - name: debug
     debug:
-      var: ec2.results[0].instances
+      var: ec2.results[0]
 
   - name: "Wait for connection on all hosts."
     wait_for:
@@ -20,3 +20,4 @@
     loop: "{{ ec2.results[0].instances }}"
     loop_control:
       label: "{{ item['private_dns_name'] }}"
+    when: ec2.results[0].instances

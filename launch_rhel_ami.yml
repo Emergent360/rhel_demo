@@ -8,9 +8,10 @@
   - launch_ami
 
   tasks:
-  - debug:
-      var: ec2
-      
+  - name: debug
+    debug:
+      var: ec2.results
+
   - name: "Wait for connection on all hosts."
     wait_for:
       host: "{{ item['tagged_instances'][0]['private_ip'] }}"

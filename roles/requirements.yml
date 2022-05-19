@@ -1,6 +1,7 @@
 ---
 collections:
 - name: amazon.aws
+  source: https://galaxy.ansible.com
 
 roles:
 - name: Datadog.datadog

@@ -17,6 +17,6 @@
       host: "{{ item['private_dns_name'] }}"
       port: 22
       timeout: 500
-    loop: "{{ ec2.results.instances }}"
+    loop: "{{ ec2.instances }}"
     loop_control:
       label: "{{ item['private_dns_name'] }}"

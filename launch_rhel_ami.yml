@@ -20,4 +20,4 @@
     loop: "{{ ec2.results[0].instances }}"
     loop_control:
       label: "{{ item['private_dns_name'] }}"
-    when: ec2.results[0].instances
+    when: ec2.results[0].instances is defined

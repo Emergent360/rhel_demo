@@ -2,6 +2,8 @@
 
 - name: "Check mounts"
   hosts: all
+  vars: 
+    df_threshold: 10
 
   tasks:
     - debug:
@@ -12,7 +14,7 @@
         df -h |
         tail -n +2 |
         sed s/%//g |
-        awk '{ if($5 > 90) print "Alert "$0;}'
+        awk '{ if($5 > {{ df_threshold | int }}) print "Alert "$0;}'
       register: result
       changed_when: False
       failed_when: result.rc != 0

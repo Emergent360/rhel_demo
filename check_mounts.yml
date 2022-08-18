@@ -5,4 +5,6 @@
 
   tasks:
     - debug:
-        var: ansible_mounts
+        msg: "{{ item.mount }}"
+      with_items:
+      - "{{ ansible_mounts }}"

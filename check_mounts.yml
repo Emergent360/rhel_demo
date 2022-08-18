@@ -16,4 +16,4 @@
         df -h |
         tail -n +2 |
         sed s/%//g |
-        awk '{ if($5 > 0) print "Alert "$0;}'
+        awk '{ if($5 > 90) print "Alert "$0;}'

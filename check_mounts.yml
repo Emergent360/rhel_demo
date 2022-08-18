@@ -13,5 +13,6 @@
         tail -n +2 |
         sed s/%//g |
         awk '{ if($5 > 90) print "Alert "$0;}'
+      register: result
       changed_when: False
       failed_when: result.rc != 0

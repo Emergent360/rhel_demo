@@ -1,0 +1,8 @@
+---
+
+- name: "Check mounts"
+  hosts: all
+
+  tasks:
+    - debug:
+        var: ansible_mounts

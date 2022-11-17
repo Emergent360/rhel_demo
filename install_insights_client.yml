@@ -1,0 +1,6 @@
+--- 
+- name: install Insights client
+  ansible.builtin.yum:
+    name: insights-client
+    state: present
+    become: yes     
